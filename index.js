@@ -8,7 +8,19 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+const createDate = function(dates, i){
+    if (isNaN(i)) {
+        const date=[];
+        for (let i = 0; i < dates.length; i++) {
+            date.push(Date.parse(dates[i])/1000);
+        }
+        
+        return date.sort().join("-");
+    }else{
+        return Date.parse(dates[i])/1000;
+    }
+};
+
 
 // ! JANGAN DIMODIFIKASI
 (() => {
