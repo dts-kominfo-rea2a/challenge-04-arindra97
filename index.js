@@ -15,9 +15,10 @@ const createDate = function(dates, i){
             date.push(Date.parse(dates[i])/1000);
         }
         
-        return date.sort().join("-");
+        return date.sort().join("-").toString();
     }else{
-        return Date.parse(dates[i])/1000;
+        const date = Date.parse(dates[i])/1000;
+        return date.toString();
     }
 };
 
